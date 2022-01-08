@@ -1,4 +1,4 @@
-/*//select the section with an id of container without using querySelector
+//select the section with an id of container without using querySelector
 let q1 = document.getElementById("container")
 console.log(q1)
 
@@ -43,16 +43,13 @@ console.log(menu)
 menu.append(sub)
 
 //loop over all of the lis inside the ol tag and set background color green
-let oltag=document.querySelector("ol")
-let lis=oltag.querySelector("li")
-for(let num=0;num<3;num++)
- {  
-   lis[num].style.color = "green"
-  }
-*/
-//remove the div with a class of footer
-let dediv=document.getElementsByClassName("footer")
-dediv.remove()
+let oltag=document.querySelectorAll("ol li")
+oltag.forEach(element=>element.style.background="red")
 
+
+//remove the div with a class of footer
+let foot=document.querySelector(".footer")
+foot.remove()
+console.log(foot)
 
 
